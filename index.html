@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="gender-wrapper">
+        <p>Please select your gender</p>
+        <div class="radio-wrapper">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="age-wrapper">
+        <p>Enter your age</p>
+        <input type="text" id="age" />
+      </div>
+      <div class="heigth-wrapper">
+        <p>Enter your heigth in [cm]</p>
+        <input type="text" id="heigth" />
+      </div>
+      <div class="weigth-wrapper">
+        <p>Enter your weigth in [kg]</p>
+        <input type="text" id="weigth" />
+      </div>
+      <div class="activityLevel-wrapper">
+        <form>
+          <p>Select your activity level</p>
+          <select id="mySelect">
+            <option value="bedrest">Bed Rest</option>
+            <option value="very-light">Very Light</option>
+            <option value="light">Light - fitness twice a week</option>
+            <option value="moderate">Moderate - a few times a week</option>
+            <option value="heavy">Heavy - exercises 5 times a week</option>
+            <option value="very-heavy">Very Heavy - exercises more than 6 times a week</option>
+          </select>
+        </form>
+      </div>
+      <div class="button-wrapper">
+        <button id="btn" onclick="BMI()">Calculate!</button>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="calValue"></p>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
